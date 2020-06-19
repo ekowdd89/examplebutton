@@ -1,10 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <TouchableOpacity
+        onPress={()=>{
+          alert("Hello")
+        }}
+        style={styles.BtnStyl}>
+        <Text>Click Me !</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -16,4 +22,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  BtnStyl:{
+    backgroundColor:'red',
+    padding:10,
+    paddingHorizontal:10,
+    borderRadius:10
+  }
 });
